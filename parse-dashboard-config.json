@@ -3,7 +3,7 @@
   "users": [
     {
       "user":"user1",
-      "pass":"pass",
+      "pass":"pass"
     }
   ],
   "useEncryptedPasswords": true
