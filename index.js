@@ -35,13 +35,13 @@ var dashboard = new ParseDashboard({
       "serverURL": process.env.SERVER_URL || 'http://localhost:1337/parse',
       "appId": process.env.APP_ID || 'myAppId',
       "masterKey": process.env.MASTER_KEY || '',
-      "appName": "Sylvie"
+      "appName": process.env.APP_NAME || ''
     }
   ],
   "users": [
     {
-      "user":"user1",
-      "pass":"pass"
+      "user": process.env.USER_DASHBOARD || 'user',
+      "pass": process.env.PASS_DASHBOARD || 'password'
     }
   ],
   "trustProxy": 1
