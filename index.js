@@ -38,6 +38,12 @@ var dashboard = new ParseDashboard({
       "appName": "Sylvie"
     }
   ],
+  "users": [
+    {
+      "user":"user1",
+      "pass":"pass"
+    }
+  ],
   "trustProxy": 1
 });
 
