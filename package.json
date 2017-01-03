@@ -13,7 +13,7 @@
     "kerberos": "~0.0.x",
     "parse": "~1.8.0",
     "parse-dashboard": "~1.0.8",
-    "parse-server": "*",
+    "parse-server": "2.2.16",
     "parse-server-gcs-adapter": "^1.1.1"
   },
   "scripts": {

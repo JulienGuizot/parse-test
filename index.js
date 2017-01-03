@@ -29,7 +29,6 @@ var api = new ParseServer({
     process.env.S3_BUCKET,
     {
       directAccess: process.env.S3_DIRECT_ACCESS,
-      bucketPrefix: process.env.S3_BUCKET_PREFIX,
       region: process.env.S3_REGION
     }
   )
