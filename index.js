@@ -3,6 +3,7 @@
 
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
+var S3Adapter = require('parse-server').S3Adapter;
 var ParseDashboard = require('parse-dashboard');
 var path = require('path');
 
@@ -21,7 +22,17 @@ var api = new ParseServer({
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
-  }
+  },
+  filesAdapter: new S3Adapter(
+    process.env.S3_ACCESS_KEY,
+    process.env.S3_SECRET_KEY,
+    process.env.S3_BUCKET,
+    {
+      directAccess: process.env.S3_DIRECT_ACCESS,
+      bucketPrefix: process.env.S3_BUCKET_PREFIX,
+      region: process.env.S3_REGION
+    }
+  )
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
